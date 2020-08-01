@@ -1,0 +1,14 @@
+//Typical Ones
+
+200 = OK
+301 = Resource Moved
+404 = Not found
+500 = Internal Server Error
+
+//Ranges
+
+100 Range: informational responses
+200 Range: success codes
+300 Range: codes for redirect
+400 Range: user or client error codes
+500 Range: server error codes
