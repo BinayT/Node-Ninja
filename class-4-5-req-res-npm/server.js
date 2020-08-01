@@ -1,12 +1,17 @@
 const http = require("http");
 const fs = require("fs");
+const _ = require("lodash");
 
 const server = http.createServer((req, res) => {
-  console.log(req.url, req.method);
+  //lodash
+  const num = _.random(0, 10);
+  console.log(num);
 
   //set header content-type to application/
-
   res.setHeader("Content-Type", "text/html");
+
+  const greet = _.once(() => console.log("hello"));
+  greet();
 
   /* res.write("hello world");
   res.end(); */

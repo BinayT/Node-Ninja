@@ -1,0 +1,2 @@
+package-lock.json  = keeps tract of different versions of dependencies in our project.
+package.json = tracks project's dependencies
