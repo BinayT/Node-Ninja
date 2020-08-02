@@ -7,6 +7,14 @@ app.set("view engine", "ejs");
 
 app.listen(3000);
 
+app.use((req, res, next) => {
+  console.log("new request is made");
+  console.log("host", req.hostname);
+  console.log("host", req.path);
+  console.log("host", req.method);
+  next();
+});
+
 app.get("/", (req, res) => {
   const blogs = [
     { title: "Hello there", snippet: "Yo yo im trying node.js ok baby" },

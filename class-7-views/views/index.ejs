@@ -3,8 +3,8 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/navbar.ejs') %>
+    <h1>All Blogs</h1>
     <div class="blogs content">
-      <h2>All Blogs</h2>
       <% if(blogs.length>0){%> <% blogs.forEach(el=> { %>
       <h2 class="title"><%= el.title %></h2>
       <p class="snippet"><%= el.snippet %></p>
