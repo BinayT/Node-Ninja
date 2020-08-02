@@ -9,7 +9,7 @@
     <nav>
       <div class="site-title">
         <a href="/">Blog</a>
-        <p>A EJS site</p>
+        <p><%= name %> site</p>
       </div>
       <ul>
         <li><a href="/">Blogs</a></li>
@@ -19,6 +19,12 @@
     </nav>
     <div class="blogs content">
       <h2>All Blogs</h2>
+      <% if(blogs.length>0){%> <% blogs.forEach(el=> { %>
+      <h2 class="title"><%= el.title %></h2>
+      <p class="snippet"><%= el.snippet %></p>
+      <% }) %> <% } else{ %>
+      <p>There are no blogs to display</p>
+      <% } %>
     </div>
   </body>
 </html>
