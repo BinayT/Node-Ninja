@@ -3,6 +3,10 @@ const morgan = require("morgan");
 
 const app = express();
 
+//Connect to MongoDB server
+const dbURI =
+  "mongodb+srv://binay:binay@thenetninjanodejs.woesg.mongodb.net/netninja?retryWrites=true&w=majority";
+
 //register view engines
 app.set("view engine", "ejs");
 
