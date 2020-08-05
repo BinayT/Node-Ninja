@@ -1,11 +1,17 @@
 const express = require("express");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
 
 const app = express();
 
 //Connect to MongoDB server
 const dbURI =
   "mongodb+srv://binay:binay@thenetninjanodejs.woesg.mongodb.net/netninja?retryWrites=true&w=majority";
+
+mongoose
+  .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((res) => console.log("MongoDB connected successfully"))
+  .catch((err) => console.log(err));
 
 //register view engines
 app.set("view engine", "ejs");
